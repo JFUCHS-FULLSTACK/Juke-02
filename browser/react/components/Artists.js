@@ -13,9 +13,9 @@ const Artists = (props) => {
 		      artists.map(artist => {
 		        return (
 		          <div className="list-group-item" key={artist.id}>
-			          <a className="thumbnail" href="#" onClick={() => selectArtist(artist.id)}>
-			            <Link to={`/artists/${artist.id}`}>{ artist.name }</Link>   
-			          </a>
+			          <Link to={`/artists/${artist.id}`} className="thumbnail" href="#" onClick={() => selectArtist(artist.id)}>
+			            { artist.name }
+			          </Link>
 		          </div>
 		        )    
 		      })

@@ -12,20 +12,15 @@ const Albums = (props) => {
       {
         albums.map(album => (
           <div className="col-xs-4" key={ album.id }>
-            <a className="thumbnail" href="#" onClick={() => selectAlbum(album.id)}>
-              <Link to={`/albums/${album.id}`}>
-                <img src={ album.imageUrl } />
-
+            <Link to={`/albums/${album.id}`} className="thumbnail" href="#" onClick={() => selectAlbum(album.id)}>              
+              <img src={ album.imageUrl } />
               <div className="caption">
-
                 <h5>
                   <span>{album.name}</span>
                 </h5>
                 <small>{ album.songs.length } songs</small>
-
               </div>
-              </Link>
-            </a>
+            </Link>
           </div>
         ))
       }

@@ -9,8 +9,8 @@ const Sidebar = (props) => {
       <img src="juke.svg" className="logo" />
       <section>
       <Link to="/albums">
-        <h4 className="menu-item active">
-          <a href="#" onClick={deselectAlbum}>ALBUMS</a>
+        <h4 className="menu-item active" onClick={deselectAlbum}>
+          ALBUMS
         </h4>
       </Link>
       </section>
